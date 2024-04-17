@@ -68,7 +68,7 @@ h3 {
 }
 
 .section-main {
-    min-height: 70vh;
+    height: 70vh;
     width: 100%;
     /* background: url("https://picsum.photos/500/500"); */
     background: url(img/6464845.jpg);
@@ -90,8 +90,8 @@ h3 {
     align-items: flex-start;
     color: #fff;
     padding: 5%;
-    width: 600px;
-    height: 300px;
+    width: 60vw;
+    height: 30vh;
 }
 
 .section-logos {
@@ -151,7 +151,6 @@ h3 {
 .wrap-section-two-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -165,6 +164,7 @@ h3 {
 .wrap-img-two-cols img {
     max-width: 300px;
     width: 100%; 
+    background-color: aqua;
 }
 
 .wrap-text-two-cols h3 {
