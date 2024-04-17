@@ -8,7 +8,6 @@ html * {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 p {
@@ -24,19 +23,6 @@ li {
     list-style: none;
 }
 
-.wrap-call-section {
-    padding: 1.5rem 0;
-}
-
-.call-a {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.2rem;
-    background-color: var(--main-color);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-r);
-}
-
 h1 {
     font-size: 3.5rem;
 }
@@ -49,6 +35,20 @@ h3 {
     font-size: 2.5rem;
 }
 
+.wrap-call-section {
+    display: flex;
+    padding: 1.5rem 0;
+}
+
+.call-a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: var(--main-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-r);
+}
+
 .header-landing {
     display: flex;
     justify-content: center;
@@ -57,27 +57,41 @@ h3 {
 }
 
 .wrap-logo {
+    width: 50vw;
     max-width: 50px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.logo-header {
     width: 100%;
-    height: 100%;
 }
 
 .section-main {
-    height: 90vh;
+    min-height: 70vh;
+    width: 100%;
+    /* background: url("https://picsum.photos/500/500"); */
     background: url(img/6464845.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     background-color: rgba(169, 184, 192, 0.7);
     background-blend-mode: multiply;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .wrap-section-main {
-    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     color: #fff;
-    padding: 20%;
+    padding: 5%;
+    width: 600px;
+    height: 300px;
 }
 
 .section-logos {
@@ -104,23 +118,34 @@ h3 {
 .wrap-section-title {
     display: flex;
     justify-content: center;
-    margin: 3rem 1rem;
+    margin: 2rem;
 }
 
 .wrap-section-news {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .item-section-news {
-    padding: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .item-section-news img {
     max-width: 300px;
     width: 100%;
     height: 100%;
+}
+
+.section-two-cols{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
 .wrap-section-two-cols {
@@ -131,16 +156,15 @@ h3 {
 }
 
 .wrap-img-two-cols {
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column;
 }
+
 .wrap-img-two-cols img {
     max-width: 300px;
-    height: 100%;
-    width: 100%;
+    width: 100%; 
 }
 
 .wrap-text-two-cols h3 {
@@ -152,43 +176,42 @@ h3 {
 }
 
 section.section-two-cols.form {
+    display: flex;
     background-color: #f2f2f2;
-    padding: 3rem 0;
+    padding: 2rem 0;
 }
-    
+
+
 .form input,
 .form textarea {
     display: flex;
-    width: 100%;
-    line-height: 1.75rem;
+    line-height: 1.50rem;
     border: 1.5px solid #fff;
     border-radius: var(--border-r);
+    width: 400px;
 }
 
-.form textarea {
-    min-height: 200px;
-    min-width: 500px;
-}
+
 
 input[type="submit"] {
     border: 0;
     display: inline;
     cursor: pointer;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 /*Footer*/
 
 .footer-section {
-    max-width: 1200px;
+    max-width: 100vw;
     margin: 0 auto;
+    background: #f2f2ff;
 }
 
 .wrap-footer-section ul {
     display: flex;
     justify-content: center;
     font-size: 1.1rem;
-
 }
 
 .wrap-footer-section ul li {
@@ -199,4 +222,34 @@ input[type="submit"] {
 .footer-credits {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .wrap-footer-section ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .wrap-section-two-cols{
+        grid-template-columns: 1fr;
+    }
+
+    .wrap-section-title{
+        margin:0.5rem;
+    }
+    .img-contact{
+        display: none;
+    }
 }
